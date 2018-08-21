@@ -1,0 +1,10 @@
+<h2> <%= @representatives.count %> Results </h2>
+
+<% @representatives.each do |representative| %>
+  <ul class="representative">
+    <li class="name"><%= representative.name %></li>
+    <li class="role"><%= representative.role %></li>
+    <li class="party"><%= representative.party %></li>
+    <li class="district"><%= representative.district %></li>
+  </ul>
+<% end %>
