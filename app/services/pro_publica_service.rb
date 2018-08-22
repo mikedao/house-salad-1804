@@ -12,10 +12,6 @@ class ProPublicaService
     call[:copyright]
   end
     
-  def call
-    @rep_search ||= get_json("/congress/v1/members/house/#{@state}/current.json")
-  end
-
   private
 
   def conn
@@ -27,5 +23,9 @@ class ProPublicaService
 
   def get_json(url)
     JSON.parse(conn.get(url).body, symbolize_names: true)
+  end
+
+  def call
+    @rep_search ||= get_json("/congress/v1/members/house/#{@state}/current.json")
   end
 end

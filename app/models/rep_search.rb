@@ -14,6 +14,6 @@ class RepSearch
   end
 
   def date
-    Date.today
+    "Mike says Hi"
   end
 end
